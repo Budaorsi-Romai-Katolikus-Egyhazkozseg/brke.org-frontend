@@ -11,6 +11,7 @@
     "nuxt": "3.0.0-rc.11"
   },
   "dependencies": {
-    "bootstrap": "^5.2.1"
+    "bootstrap": "^5.2.1",
+    "bootstrap-icons": "^1.9.1"
   }
 }
