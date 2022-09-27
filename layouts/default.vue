@@ -1,9 +1,9 @@
 <template>
   <nav class="navbar navbar-expand-sm bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="/">
+      <NuxtLink class="navbar-brand" to="/">
         <img src="/assets/logo.png" width="120" height="45" />
-      </a>
+      </NuxtLink>
       <button
         class="navbar-toggler"
         type="button"
@@ -15,13 +15,19 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-sm-0">
           <li class="nav-item">
-            <a class="nav-link" href="/">Kezdőlap</a>
+            <NuxtLink class="nav-link" activeClass="active" to="/"
+              >Kezdőlap</NuxtLink
+            >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/kozvetites">Közvetítés</a>
+            <NuxtLink class="nav-link" activeClass="active" to="/kozvetites"
+              >Közvetítés</NuxtLink
+            >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/kapcsolat">Kapcsolat</a>
+            <NuxtLink class="nav-link" activeClass="active" to="/kapcsolat"
+              >Kapcsolat</NuxtLink
+            >
           </li>
         </ul>
       </div>
