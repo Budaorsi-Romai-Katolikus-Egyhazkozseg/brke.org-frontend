@@ -23,6 +23,9 @@
           <li class="nav-item">
             <NuxtLink class="nav-link" to="/kapcsolat">Kapcsolat</NuxtLink>
           </li>
+          <li class="nav-item">
+            <NuxtLink class="nav-link" to="/cikkek">Cikkek</NuxtLink>
+          </li>
         </ul>
       </div>
     </div>
