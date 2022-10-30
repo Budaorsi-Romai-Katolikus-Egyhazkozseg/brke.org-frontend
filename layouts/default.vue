@@ -15,19 +15,13 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-sm-0">
           <li class="nav-item">
-            <NuxtLink class="nav-link" activeClass="active" to="/"
-              >Kezdőlap</NuxtLink
-            >
+            <NuxtLink class="nav-link" to="/">Kezdőlap</NuxtLink>
           </li>
           <li class="nav-item">
-            <NuxtLink class="nav-link" activeClass="active" to="/kozvetites"
-              >Közvetítés</NuxtLink
-            >
+            <NuxtLink class="nav-link" to="/kozvetites">Közvetítés</NuxtLink>
           </li>
           <li class="nav-item">
-            <NuxtLink class="nav-link" activeClass="active" to="/kapcsolat"
-              >Kapcsolat</NuxtLink
-            >
+            <NuxtLink class="nav-link" to="/kapcsolat">Kapcsolat</NuxtLink>
           </li>
         </ul>
       </div>
@@ -37,3 +31,13 @@
     <slot />
   </div>
 </template>
+
+<style>
+.nav-link {
+  padding-left: var(--bs-navbar-nav-link-padding-x);
+}
+
+.nav-link.active {
+  background-color: var(--bs-primary);
+}
+</style>
