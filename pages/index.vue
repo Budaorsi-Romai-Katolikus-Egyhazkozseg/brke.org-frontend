@@ -42,7 +42,7 @@
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">
       <div class="col">
         <div class="card entry-card">
-          <img src="/public/ingatabor.jpg" class="card-img-top" />
+          <img src="/images/ingatabor.jpg" class="card-img-top" />
           <div class="card-body">
             <h5 class="card-title">Inga-tábor</h5>
             <p class="card-text">
@@ -55,7 +55,7 @@
       </div>
       <div class="col">
         <div class="card entry-card">
-          <img src="/public/ingatabor.jpg" class="card-img-top" />
+          <img src="/images/ingatabor.jpg" class="card-img-top" />
           <div class="card-body">
             <h5 class="card-title">Inga-tábor</h5>
             <p class="card-text">
@@ -68,7 +68,7 @@
       </div>
       <div class="col">
         <div class="card entry-card">
-          <img src="/public/ingatabor.jpg" class="card-img-top" />
+          <img src="/images/ingatabor.jpg" class="card-img-top" />
           <div class="card-body">
             <h5 class="card-title">Inga-tábor</h5>
             <p class="card-text">
@@ -81,7 +81,7 @@
       </div>
       <div class="col">
         <div class="card entry-card">
-          <img src="/public/ingatabor.jpg" class="card-img-top" />
+          <img src="/images/ingatabor.jpg" class="card-img-top" />
           <div class="card-body">
             <h5 class="card-title">Inga-tábor</h5>
             <p class="card-text">

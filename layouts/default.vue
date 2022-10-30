@@ -2,7 +2,7 @@
   <nav class="navbar navbar-expand-sm bg-light">
     <div class="container-fluid">
       <NuxtLink class="navbar-brand" to="/">
-        <img src="/assets/logo.png" width="120" height="45" />
+        <img src="~/assets/logo.png" width="120" height="45" />
       </NuxtLink>
       <button
         class="navbar-toggler"

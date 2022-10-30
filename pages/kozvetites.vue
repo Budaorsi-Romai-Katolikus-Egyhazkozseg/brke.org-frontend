@@ -3,7 +3,7 @@
     <h1>Közvetítés</h1>
     <div class="ratio ratio-16x9">
       <!-- <div class="placeholder"></div> -->
-      <img src="/assets/stream-thumbnail.png" />
+      <img src="~/assets/stream-thumbnail.png" />
       <iframe
         src="https://www.youtube.com/embed/live_stream?channel=UClZucNJxRAwF26bf6kCWtsQ"
         allowfullscreen
