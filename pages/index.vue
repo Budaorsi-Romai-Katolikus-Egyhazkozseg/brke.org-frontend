@@ -1,3 +1,9 @@
+<script setup>
+import { titlePostfix } from "~/utils/constants.ts";
+
+useHead({ title: `Kezdőlap - ${titlePostfix}` });
+</script>
+
 <template>
   <div>
     <h1>Kezdőlap</h1>

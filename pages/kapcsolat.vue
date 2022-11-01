@@ -1,3 +1,9 @@
+<script setup>
+import { titlePostfix } from "~/utils/constants.ts";
+
+useHead({ title: `Kapcsolat - ${titlePostfix}` });
+</script>
+
 <template>
   <div>
     <h1>Kapcsolat</h1>
@@ -17,9 +23,9 @@
           <td><i class="bi bi-envelope-fill"></i></td>
           <td>Email:</td>
           <td>
-            <a href="mailto:some@email.com" target="_blank"
-              >plebaniahivatal@brke.org</a
-            >
+            <a href="mailto:some@email.com" target="_blank">
+              plebaniahivatal@brke.org
+            </a>
           </td>
         </tr>
       </tbody>
@@ -38,3 +44,18 @@
     <!-- </ul> -->
   </div>
 </template>
+
+<!-- <script setup lang="ts"> -->
+<!-- //import type { Restaurant } from '~/types' -->
+<!-- const route = useRoute(); -->
+<!-- const { find } = useStrapi(); -->
+<!-- const response = await(async () => { -->
+<!--   try { -->
+<!--     return await find("articles", { populate: "*" }); -->
+<!--   } catch (e) { -->
+<!--     return { data: [] }; -->
+<!--   } -->
+<!-- })(); -->
+<!-- //const response = await findOne<Restaurant>('restaurants', route.params.id) -->
+<!-- console.log(response); -->
+<!-- </script> -->

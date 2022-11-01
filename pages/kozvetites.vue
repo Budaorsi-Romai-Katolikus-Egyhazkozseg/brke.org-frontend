@@ -1,3 +1,9 @@
+<script setup>
+import { titlePostfix } from "~/utils/constants.ts";
+
+useHead({ title: `Közvetítés - ${titlePostfix}` });
+</script>
+
 <template>
   <div>
     <h1>Közvetítés</h1>
