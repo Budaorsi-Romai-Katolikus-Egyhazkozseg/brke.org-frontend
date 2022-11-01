@@ -1,3 +1,40 @@
+<script setup lang="ts">
+//import type { Article } from '~/types'
+import { getPageItems } from "~/utils/pagination.ts";
+
+const route = useRoute();
+const { find } = useStrapi();
+
+// const categories = await find("categories");
+
+const page = computed(() =>
+  route.query.oldal ? Number(route.query.oldal) : 1
+);
+
+const getArticles = async () =>
+  await find("articles", {
+    populate: "*",
+    pagination: { pageSize: 4, page: page.value },
+  });
+const articles = ref(await getArticles());
+
+const pageCount = computed(() => articles.value.meta.pagination.pageCount);
+
+const pageItems = computed(() =>
+  getPageItems(page.value, pageCount.value, 5).map((i) => ({
+    target: i,
+    active: page.value === i,
+  }))
+);
+
+watch(
+  () => route.query.oldal,
+  async () => {
+    articles.value = await getArticles();
+  }
+);
+</script>
+
 <template>
   <div>
     <h2>Összes</h2>
@@ -16,64 +53,45 @@
     <nav aria-label="Lapozás">
       <ul class="pagination justify-content-center">
         <li class="page-item" :class="{ disabled: page === 1 }">
-          <a class="page-link" :href="`?oldal=${page - 1}`" aria-label="Előző">
+          <NuxtLink
+            class="page-link"
+            active-class="∅"
+            :to="`?oldal=${page - 1}`"
+            aria-label="Előző"
+          >
             <span aria-hidden="true">&laquo;</span>
-          </a>
+          </NuxtLink>
         </li>
         <li
-          v-for="pageItem in pageItems_v2"
+          v-for="pageItem in pageItems"
           class="page-item"
           :class="{ active: pageItem.active }"
         >
-          <a class="page-link" :href="`?oldal=${pageItem.target}`">{{
-            pageItem.target
-          }}</a>
+          <NuxtLink
+            class="page-link"
+            active-class="∅"
+            :to="`?oldal=${pageItem.target}`"
+          >
+            {{ pageItem.target }}
+          </NuxtLink>
         </li>
         <li
           class="page-item"
           :class="{ disabled: page === articles.meta.pagination.pageCount }"
         >
-          <a
+          <NuxtLink
             class="page-link"
-            :href="`?oldal=${page + 1}`"
+            active-class="∅"
+            :to="`?oldal=${page + 1}`"
             aria-label="Következő"
           >
             <span aria-hidden="true">&raquo;</span>
-          </a>
+          </NuxtLink>
         </li>
       </ul>
     </nav>
   </div>
 </template>
-
-<script setup lang="ts">
-//import type { Article } from '~/types'
-const route = useRoute();
-const page = route.query.oldal ? Number(route.query.oldal) : 1;
-const { find } = useStrapi();
-const categories = await find("categories");
-const articles = await find("articles", {
-  populate: "*",
-  pagination: { pageSize: 4, page },
-});
-
-const pageItems_v1 = [-2, -1, 0, 1, 2]
-  .map((offset) => ({
-    target: page + offset,
-    active: offset === 0,
-  }))
-  .filter(
-    ({ target }) => 1 <= target && target <= articles.meta.pagination.pageCount
-  );
-
-const pageItems_v2 = Array.from(
-  { length: articles.meta.pagination.pageCount },
-  (_, i) => ({ target: i + 1, active: page === i + 1 })
-)
-  .sort((a, b) => Math.abs(a.target - page) - Math.abs(b.target - page))
-  .slice(0, 5)
-  .sort((a, b) => a.target - b.target);
-</script>
 
 <style scoped>
 .pagination {
