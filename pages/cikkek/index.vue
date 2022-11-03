@@ -1,5 +1,6 @@
 <script setup lang="ts">
 //import type { Article } from '~/types'
+import { cmsURL } from "~/utils/constants.ts";
 import { getPageItems } from "~/utils/pagination.ts";
 
 const route = useRoute();
@@ -13,8 +14,8 @@ const page = computed(() =>
 
 const getArticles = async () =>
   await find("articles", {
-    populate: "*",
     pagination: { pageSize: 4, page: page.value },
+    populate: "*",
   });
 const articles = ref(await getArticles());
 
@@ -44,7 +45,10 @@ watch(
           v-for="article in articles.data"
           :category="article.attributes.category.data.attributes.slug"
           :title="article.attributes.title"
-          :imageUrl="`https://cms.brke.banti.hu${article.attributes.cover?.data?.attributes?.formats?.thumbnail?.url}`"
+          :imageUrl="
+            cmsURL +
+            article.attributes.cover?.data?.attributes?.formats?.thumbnail?.url
+          "
           :teaser="article.attributes.teaser"
           :slug="article.attributes.slug"
         />

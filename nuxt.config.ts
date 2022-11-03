@@ -1,4 +1,5 @@
-// https://v3.nuxtjs.org/api/configuration/nuxt.config
+import { cmsURL } from "./utils/constants";
+
 export default defineNuxtConfig({
   css: ["~/assets/scss/main.scss"],
   modules: ["@nuxtjs/strapi"],
@@ -8,7 +9,7 @@ export default defineNuxtConfig({
     },
   },
   strapi: {
-    url: "https://cms.brke.banti.hu",
+    url: cmsURL,
     prefix: "/api",
     version: "v4",
   },
