@@ -8,6 +8,7 @@ export default defineNuxtConfig({
       linkActiveClass: "active",
     },
   },
+  ssr: false,
   strapi: {
     url: cmsURL,
     prefix: "/api",
