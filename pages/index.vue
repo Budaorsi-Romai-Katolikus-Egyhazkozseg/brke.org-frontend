@@ -1,12 +1,23 @@
 <script setup>
+// import { cmsURL } from "~/utils/constants.ts";
 import { titlePostfix } from "~/utils/constants.ts";
 
 useHead({ title: `Kezdőlap - ${titlePostfix}` });
+
+// const { find } = useStrapi();
+//
+// const articles = await find("articles", {
+//   filters: { current: true },
+//   populate: "*",
+// });
 </script>
 
 <template>
   <div>
     <h1>Kezdőlap</h1>
+    A honlap átalakítás alatt áll, kérjük a látogatók szíves türelmét a teljes
+    funkcionalitás visszaállításáig!
+
     <h2>Miserend</h2>
     <table class="table">
       <thead>
@@ -44,5 +55,19 @@ useHead({ title: `Kezdőlap - ${titlePostfix}` });
         </tr>
       </tbody>
     </table>
+    <!-- <h2>Aktuális / Kiemelt cikkek</h2> -->
+    <!-- <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4"> -->
+    <!--   <ArticleCard -->
+    <!--     v-for="article in articles.data" -->
+    <!--     :category="article.attributes.category.data.attributes.slug" -->
+    <!--     :title="article.attributes.title" -->
+    <!--     :imageUrl=" -->
+    <!--       cmsURL + -->
+    <!--       article.attributes.cover?.data?.attributes?.formats?.thumbnail?.url -->
+    <!--     " -->
+    <!--     :teaser="article.attributes.teaser" -->
+    <!--     :slug="article.attributes.slug" -->
+    <!--   /> -->
+    <!-- </div> -->
   </div>
 </template>
