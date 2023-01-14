@@ -15,21 +15,48 @@ const article = response.data[0].attributes
 
 <template>
   <div>
-    <div class="container">
-      <div class="row row-cols-1 row-cols-sm-2">
-        <div class="col">
-          <h2>{{ article.title }}</h2>
-          <p class="text-muted">{{ article.submitted }}</p>
-          <p class="fw-bold">{{ article.teaser }}</p>
-        </div>
-        <div class="col">
-          <img
-            class="w-100 rounded-4"
-            :src="cmsURL + article.cover?.data?.attributes?.url"
-          />
-        </div>
+    <div class="header d-grid container mb-4">
+      <div :style="{ gridArea: 'title' }">
+        <h2>{{ article.title }}</h2>
+      </div>
+      <div class="p-4" :style="{ gridArea: 'teaser' }">
+        <p class="text-muted">{{ article.date }}</p>
+        <p class="fw-bold">{{ article.teaser }}</p>
+      </div>
+      <div :style="{ gridArea: 'image' }">
+        <img
+          class="w-100 rounded-4"
+          :src="cmsURL + article.cover?.data?.attributes?.url"
+        />
       </div>
     </div>
-    <div v-html="md.render(article.content)" />
+    <div class="container" v-html="md.render(article.content)" />
   </div>
 </template>
+
+<style lang="scss">
+@import '~/assets/scss/main.scss';
+
+.header {
+  grid-template-areas:
+    'title'
+    'teaser'
+    'image';
+}
+
+@include media-breakpoint-up(md) {
+  .header {
+    grid-template-areas:
+      'title  title'
+      'teaser image';
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .header {
+    grid-template-areas:
+      'title  image'
+      'teaser image';
+  }
+}
+</style>
