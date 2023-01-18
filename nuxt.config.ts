@@ -4,7 +4,7 @@ import { cmsURL } from './utils/constants'
 export default defineNuxtConfig({
   css: ['~/assets/scss/main.scss', 'bootstrap-icons/font/bootstrap-icons.css'],
   modules: ['@nuxtjs/strapi', 'nuxt-purgecss'],
-  purgecss: { safelist: ['collapsing'] },
+  purgecss: { enabled: false, safelist: ['collapsing'] },
   router: { options: { linkActiveClass: 'active' } },
   ssr: false,
   strapi: { url: cmsURL },
