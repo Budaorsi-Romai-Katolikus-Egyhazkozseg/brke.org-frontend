@@ -11,6 +11,7 @@ const getArticles = async () =>
   await find('articles', {
     pagination: { pageSize: 4, page: page.value },
     populate: '*',
+    sort: 'date:desc',
   })
 const articles = ref(await getArticles())
 
