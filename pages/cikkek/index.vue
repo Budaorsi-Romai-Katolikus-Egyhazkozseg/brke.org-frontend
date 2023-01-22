@@ -43,7 +43,7 @@ watch(
           :title="article.attributes.title"
           :imageUrl="
             cmsURL +
-            article.attributes.cover?.data?.attributes?.formats?.thumbnail?.url
+            article.attributes.cover?.data?.attributes?.formats?.small?.url
           "
           :teaser="article.attributes.teaser"
           :slug="article.attributes.slug"
