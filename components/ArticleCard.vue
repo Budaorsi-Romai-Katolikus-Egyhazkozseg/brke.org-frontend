@@ -41,5 +41,9 @@ img {
 .card-text {
   height: 15rem;
   overflow: hidden;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 10;
 }
 </style>

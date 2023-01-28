@@ -14,7 +14,7 @@ const articles = await find('articles', {
 </script>
 
 <template>
-  <div>
+  <div class="mb-3">
     <h1>Kezdőlap</h1>
 
     <div class="container" v-html="md.render(homepage.content)" />

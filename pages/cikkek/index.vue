@@ -35,7 +35,7 @@ watch(
 <template>
   <div>
     <h2>Összes</h2>
-    <div class="container mb-4">
+    <div class="mb-4">
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">
         <ArticleCard
           v-for="article in articles.data"
@@ -59,7 +59,7 @@ watch(
             :to="`?oldal=${page - 1}`"
             aria-label="Előző"
           >
-            <span aria-hidden="true">&laquo;</span>
+            <span aria-hidden="true">«</span>
           </NuxtLink>
         </li>
         <li
@@ -85,7 +85,7 @@ watch(
             :to="`?oldal=${page + 1}`"
             aria-label="Következő"
           >
-            <span aria-hidden="true">&raquo;</span>
+            <span aria-hidden="true">»</span>
           </NuxtLink>
         </li>
       </ul>
