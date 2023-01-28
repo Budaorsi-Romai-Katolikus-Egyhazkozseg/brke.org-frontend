@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav class="navbar navbar-expand-sm bg-light">
+    <nav class="navbar navbar-expand-sm bg-light sticky-top">
       <div class="container-fluid">
         <NuxtLink class="navbar-brand" to="/">
           <img src="~/assets/logo.png" width="120" height="45" />
@@ -31,7 +31,7 @@
         </div>
       </div>
     </nav>
-    <div class="container">
+    <div class="container pt-3">
       <slot />
     </div>
   </div>
