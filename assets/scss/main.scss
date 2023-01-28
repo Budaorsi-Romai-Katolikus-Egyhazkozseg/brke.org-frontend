@@ -1,3 +1,4 @@
 $primary: #fac42b; // BRKE Yellow
+$link-color: darken($primary, 25%);
 
 @import 'bootstrap/scss/bootstrap.scss';
