@@ -11,6 +11,17 @@ const response = await find('articles', {
 })
 
 const article = response.data[0].attributes
+
+const iconForURL = (url) =>
+  ({
+    doc: 'file-earmark-text',
+    docx: 'file-earmark-text',
+    jpg: 'file-earmark-image',
+    mp3: 'file-earmark-music',
+    pdf: 'file-earmark-pdf',
+    png: 'file-earmark-image',
+    txt: 'file-earmark-text',
+  }[url.split('.').pop()] ?? 'file-earmark')
 </script>
 
 <template>
@@ -32,23 +43,14 @@ const article = response.data[0].attributes
     </div>
     <div class="container" v-html="md.render(article.content)" />
     <div class="container">
-      <a
+      <Attachment
+        class="m-1"
         v-for="attachment in article.attachments.data"
-        class="btn btn-primary m-1"
-        :href="cmsURL + attachment.attributes.url"
-        :download="attachment.attributes.name"
-      >
-        <i
-          class="bi bi-file-earmark-text-fill"
-          :style="{
-            fontSize: '1.3rem',
-            lineHeight: '1rem',
-            verticalAlign: 'top',
-            marginLeft: '-5px',
-          }"
-        ></i>
-        {{ attachment.attributes.caption }}
-      </a>
+        :url="cmsURL + attachment.attributes.url"
+        :name="attachment.attributes.name"
+        :icon="iconForURL(attachment.attributes.url)"
+        :caption="attachment.attributes.caption ?? attachment.attributes.name"
+      />
     </div>
   </div>
 </template>

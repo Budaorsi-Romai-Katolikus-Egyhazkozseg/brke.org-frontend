@@ -132,22 +132,11 @@ useHead({ title: `Kapcsolat - ${titlePostfix}` })
               eltérő számlázási címet a Plébánia Hivatalnak számviteli okokból
               nem áll módjában befogadni.
             </p>
-            <a
-              class="btn btn-primary"
-              href="https://drive.google.com/file/d/1FF4or5TU5nnwJPCX90LCkEcdakCJJOWi/view?usp=sharing"
-              target="_blank"
-            >
-              <i
-                class="bi bi-file-earmark-text-fill"
-                :style="{
-                  fontSize: '1.3rem',
-                  lineHeight: '1rem',
-                  verticalAlign: 'top',
-                  marginLeft: '-5px',
-                }"
-              ></i>
-              Számlabefogadási irányelvek
-            </a>
+            <Attachment
+              url="https://drive.google.com/file/d/1FF4or5TU5nnwJPCX90LCkEcdakCJJOWi"
+              caption="Számlabefogadási irányelvek"
+              icon="file-earmark-text"
+            />
           </div>
         </div>
 
