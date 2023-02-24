@@ -31,6 +31,25 @@ const article = response.data[0].attributes
       </div>
     </div>
     <div class="container" v-html="md.render(article.content)" />
+    <div class="container">
+      <a
+        v-for="attachment in article.attachments.data"
+        class="btn btn-primary m-1"
+        :href="cmsURL + attachment.attributes.url"
+        :download="attachment.attributes.name"
+      >
+        <i
+          class="bi bi-file-earmark-text-fill"
+          :style="{
+            fontSize: '1.3rem',
+            lineHeight: '1rem',
+            verticalAlign: 'top',
+            marginLeft: '-5px',
+          }"
+        ></i>
+        {{ attachment.attributes.caption }}
+      </a>
+    </div>
   </div>
 </template>
 
