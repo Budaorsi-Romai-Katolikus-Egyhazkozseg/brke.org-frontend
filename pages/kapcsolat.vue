@@ -195,103 +195,103 @@ useHead({ title: `Kapcsolat - ${titlePostfix}` })
             <Person name="Mészáros Zoltán" email="kantor@brke.org" />
           </People>
 
-          <h4>Világi képviselőtestület</h4>
-          <People title="Egyházközség elnöke">
-            <Person name="Nobilis Márió" />
-          </People>
-
-          <People title="Világi elnök">
-            <Person name="Michelberger Mátyás" />
-          </People>
-
-          <People title="Egyházközség elnöke">
-            <Person name="Nobilis Márió" />
-          </People>
-
-          <People title="Pénztáros">
-            <Person name="Pittler Terézia" />
-          </People>
-
-          <People title="Plébániai segítők">
-            <Person name="Supala Virág" />
-            <Person name="Bakos Kristóf" />
-            <Person name="Borlay Endre" />
-            <Person name="Ifj. Koltai Károly" />
-            <Person name="Radnóczi Péter" />
-          </People>
-
-          <People title="Hivatalból tagok">
-            <Person name="Nobilis Márió" position="plébániai kormányzó" />
-            <Person name="Béresné Dajka Katalin" position="óvodavezető" />
-            <Person name="Mészáros Zoltán" position="kántor" />
-            <Person
-              name="Pintér Anasztázia"
-              position="igazgató, Mindszenty József Római Katolikus Általános Iskola"
-            />
-          </People>
-
-          <People title="Hívek által választott tagok">
-            <Person name="Borlay Endre" />
-            <Person name="Brádeánné Gacs Judit" />
-            <Person name="Csányi-Csulits Anna" />
-            <Person name="ifj. Főcze Károly" />
-            <Person name="Grósz András" />
-            <Person name="Michelberger Mátyás" />
-            <Person name="Mocsáry Pál" />
-            <Person name="Novák György" />
-            <Person name="Pittler Terézia" />
-          </People>
-
-          <People title="Plébános által delegált tagok">
-            <Person name="dr. Czuczor Gergely" />
-            <Person name="Kállai-Bálint Szabolcs" />
-            <Person name="Koltai Károly" />
-            <Person name="Kővári László" />
-            <Person name="dr. Szaniszlóné dr. Bakó Emese" />
-            <Person name="Sokolowskiné Szakács Katalin" />
-          </People>
-
-          <h4>Munkacsoportok</h4>
-          <People title="Karitasz munkacsoport">
-            <Person name="Novák György (elnök)" />
-            <Person name="Brádeánné Gacs Judit" />
-            <Person name="Dr. Szaniszlóné Bakó Emese" />
-            <Person name="Mészáros Zoltán" />
-          </People>
-
-          <People title="Média munkacsoport">
-            <Person name="Grósz András" />
-            <Person name="Czuczor Gergely" />
-            <Person name="Béres Katalin" />
-            <Person name="Sokolowskiné Szakács Katalin" />
-            <Person name="Kállai-Bálint Szabolcs" />
-          </People>
-
-          <People title="Missziós munkacsoport">
-            <Person name="Borlay Endre (elnök)" />
-            <Person name="Kővári László" />
-            <Person name="Kállai-Bálint Szabolcs" />
-            <Person name="Nobilis Márió atya" />
-          </People>
-
-          <People title="Liturgikus munkacsoport">
-            <Person name="Főcze Károly (elnök)" />
-            <Person name="Mészáros Zoltán" />
-            <Person name="Nobilis Márió" />
-          </People>
-
-          <People title="Kateketikai munkacsoport">
-            <Person name="Nobilis Márió (elnök)" />
-            <Person name="Béres Katalin" />
-            <Person name="Csányi-Csulits Anna" />
-            <Person name="Brádeánné Gacs Judit" />
-          </People>
-
-          <People title="Gazdasági munkacsoport">
-            <Person name="Mocsáry Pál" />
-            <Person name="Pittler Terézia" />
-            <Person name="Főcze Károly" />
-          </People>
+          <!-- <h4>Világi képviselőtestület</h4> -->
+          <!-- <People title="Egyházközség elnöke"> -->
+          <!--   <Person name="Nobilis Márió" /> -->
+          <!-- </People> -->
+          <!---->
+          <!-- <People title="Világi elnök"> -->
+          <!--   <Person name="Michelberger Mátyás" /> -->
+          <!-- </People> -->
+          <!---->
+          <!-- <People title="Egyházközség elnöke"> -->
+          <!--   <Person name="Nobilis Márió" /> -->
+          <!-- </People> -->
+          <!---->
+          <!-- <People title="Pénztáros"> -->
+          <!--   <Person name="Pittler Terézia" /> -->
+          <!-- </People> -->
+          <!---->
+          <!-- <People title="Plébániai segítők"> -->
+          <!--   <Person name="Supala Virág" /> -->
+          <!--   <Person name="Bakos Kristóf" /> -->
+          <!--   <Person name="Borlay Endre" /> -->
+          <!--   <Person name="Ifj. Koltai Károly" /> -->
+          <!--   <Person name="Radnóczi Péter" /> -->
+          <!-- </People> -->
+          <!---->
+          <!-- <People title="Hivatalból tagok"> -->
+          <!--   <Person name="Nobilis Márió" position="plébániai kormányzó" /> -->
+          <!--   <Person name="Béresné Dajka Katalin" position="óvodavezető" /> -->
+          <!--   <Person name="Mészáros Zoltán" position="kántor" /> -->
+          <!--   <Person -->
+          <!--     name="Pintér Anasztázia" -->
+          <!--     position="igazgató, Mindszenty József Római Katolikus Általános Iskola" -->
+          <!--   /> -->
+          <!-- </People> -->
+          <!---->
+          <!-- <People title="Hívek által választott tagok"> -->
+          <!--   <Person name="Borlay Endre" /> -->
+          <!--   <Person name="Brádeánné Gacs Judit" /> -->
+          <!--   <Person name="Csányi-Csulits Anna" /> -->
+          <!--   <Person name="ifj. Főcze Károly" /> -->
+          <!--   <Person name="Grósz András" /> -->
+          <!--   <Person name="Michelberger Mátyás" /> -->
+          <!--   <Person name="Mocsáry Pál" /> -->
+          <!--   <Person name="Novák György" /> -->
+          <!--   <Person name="Pittler Terézia" /> -->
+          <!-- </People> -->
+          <!---->
+          <!-- <People title="Plébános által delegált tagok"> -->
+          <!--   <Person name="dr. Czuczor Gergely" /> -->
+          <!--   <Person name="Kállai-Bálint Szabolcs" /> -->
+          <!--   <Person name="Koltai Károly" /> -->
+          <!--   <Person name="Kővári László" /> -->
+          <!--   <Person name="dr. Szaniszlóné dr. Bakó Emese" /> -->
+          <!--   <Person name="Sokolowskiné Szakács Katalin" /> -->
+          <!-- </People> -->
+          <!---->
+          <!-- <h4>Munkacsoportok</h4> -->
+          <!-- <People title="Karitasz munkacsoport"> -->
+          <!--   <Person name="Novák György (elnök)" /> -->
+          <!--   <Person name="Brádeánné Gacs Judit" /> -->
+          <!--   <Person name="Dr. Szaniszlóné Bakó Emese" /> -->
+          <!--   <Person name="Mészáros Zoltán" /> -->
+          <!-- </People> -->
+          <!---->
+          <!-- <People title="Média munkacsoport"> -->
+          <!--   <Person name="Grósz András" /> -->
+          <!--   <Person name="Czuczor Gergely" /> -->
+          <!--   <Person name="Béres Katalin" /> -->
+          <!--   <Person name="Sokolowskiné Szakács Katalin" /> -->
+          <!--   <Person name="Kállai-Bálint Szabolcs" /> -->
+          <!-- </People> -->
+          <!---->
+          <!-- <People title="Missziós munkacsoport"> -->
+          <!--   <Person name="Borlay Endre (elnök)" /> -->
+          <!--   <Person name="Kővári László" /> -->
+          <!--   <Person name="Kállai-Bálint Szabolcs" /> -->
+          <!--   <Person name="Nobilis Márió atya" /> -->
+          <!-- </People> -->
+          <!---->
+          <!-- <People title="Liturgikus munkacsoport"> -->
+          <!--   <Person name="Főcze Károly (elnök)" /> -->
+          <!--   <Person name="Mészáros Zoltán" /> -->
+          <!--   <Person name="Nobilis Márió" /> -->
+          <!-- </People> -->
+          <!---->
+          <!-- <People title="Kateketikai munkacsoport"> -->
+          <!--   <Person name="Nobilis Márió (elnök)" /> -->
+          <!--   <Person name="Béres Katalin" /> -->
+          <!--   <Person name="Csányi-Csulits Anna" /> -->
+          <!--   <Person name="Brádeánné Gacs Judit" /> -->
+          <!-- </People> -->
+          <!---->
+          <!-- <People title="Gazdasági munkacsoport"> -->
+          <!--   <Person name="Mocsáry Pál" /> -->
+          <!--   <Person name="Pittler Terézia" /> -->
+          <!--   <Person name="Főcze Károly" /> -->
+          <!-- </People> -->
         </dl>
       </div>
     </div>
