@@ -34,7 +34,32 @@ watch(
 
 <template>
   <div>
+    <div class="container d-flex justify-content-between py-4">
     <h2>Összes</h2>
+      <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+        <button type="button" class="btn btn-outline-primary dropdown-toggle btn-sm" data-bs-toggle="dropdown"
+          aria-expanded="false">
+          <i class="bi-filter"></i>
+          Szűrés
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end p-2">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="hirdetesek">
+            <label class="form-check-label" for="hirdetesek">
+              Hirdetések
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="esemenyek">
+            <label class="form-check-label" for="esemenyek">
+              Események
+            </label>
+          </div>
+        </ul>
+      </div>
+    </div>
+
+
     <div class="mb-4">
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">
         <ArticleCard
