@@ -31,9 +31,25 @@
         </div>
       </div>
     </nav>
-    <div class="container pt-3">
+    <div class="container py-3">
       <slot />
     </div>
+    <footer
+      class="bg-light border-top">
+      <div class="container d-flex justify-content-between align-items-center py-4 px-4">
+        <p class="col-md-4 mb-0 text-muted"> 2023 Donkó</p>
+        <NuxtLink
+          class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none text-muted"
+          to="/">
+          <img src="~/assets/logo-picture.svg" height="35" />
+        </NuxtLink>
+        <ul class="nav col-md-4 justify-content-end">
+          <li class="nav-item">
+            <NuxtLink class="nav-link px-2 text-muted">Impresszum</NuxtLink>
+          </li>
+        </ul>
+      </div>
+    </footer>
   </div>
 </template>
 
