@@ -6,11 +6,11 @@ useHead({ title: `Kapcsolat - ${titlePostfix}` })
 
 <template>
   <div class="row g-2 mb-3">
-    <h1>Kapcsolat</h1>
-    <p class="text-muted m-0">
+    <!-- <h1>Kapcsolat</h1> -->
+    <!-- <p class="text-muted m-0">
       A Budaörsi Római Katolikus Egyházközség elérhetősége, ügyintézés és
       közérdekű információk.
-    </p>
+    </p> -->
 
     <div class="card">
       <div class="card-body">

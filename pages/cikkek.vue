@@ -6,7 +6,7 @@ useHead({ title: `Cikkek - ${titlePostfix}` })
 
 <template>
   <div>
-    <h1>Cikkek</h1>
+    <!-- <h1>Cikkek</h1> -->
     <NuxtPage />
   </div>
 </template>

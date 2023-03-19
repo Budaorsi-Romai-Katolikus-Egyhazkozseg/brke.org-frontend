@@ -6,7 +6,7 @@ useHead({ title: `Közvetítés - ${titlePostfix}` })
 
 <template>
   <div>
-    <h1>Közvetítés</h1>
+    <!-- <h1>Közvetítés</h1> -->
     <div class="ratio ratio-16x9">
       <!-- <div class="placeholder"></div> -->
       <img src="~/assets/stream-thumbnail.png" />
