@@ -12,3 +12,13 @@ export default {
   },
 }
 </script>
+
+<style>
+dd {
+  transition: background-color 0.5s;
+}
+
+dt:hover + dd {
+  background-color: lightgray;
+}
+</style>
