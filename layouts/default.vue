@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <nav class="navbar navbar-expand-sm bg-light sticky-top">
+  <div class="d-flex flex-column min-vh-100">
+    <header class="navbar navbar-expand-sm bg-light sticky-top">
       <div class="container-fluid">
         <NuxtLink class="navbar-brand" to="/">
           <img src="~/assets/logo01.png" height="45" />
@@ -13,7 +13,7 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <nav class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto mb-2 mb-sm-0">
             <li class="nav-item">
               <NuxtLink class="nav-link" to="/">Kezdőlap</NuxtLink>
@@ -28,26 +28,27 @@
               <NuxtLink class="nav-link" to="/cikkek">Cikkek</NuxtLink>
             </li>
           </ul>
-        </div>
+        </nav>
       </div>
-    </nav>
+    </header>
     <div class="container py-3">
       <slot />
     </div>
-    <footer
-      class="bg-light border-top">
-      <div class="container d-flex justify-content-between align-items-center py-4 px-4">
-        <p class="col-md-4 mb-0 text-muted"> 2023 Donkó</p>
-        <NuxtLink
-          class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none text-muted"
-          to="/">
-          <img src="~/assets/logo-picture.svg" height="35" />
-        </NuxtLink>
-        <ul class="nav col-md-4 justify-content-end">
-          <li class="nav-item">
-            <NuxtLink class="nav-link px-2 text-muted">Impresszum</NuxtLink>
-          </li>
-        </ul>
+    <footer class="bg-light border-top mt-auto pb-5">
+      <div
+        class="container d-flex justify-content-between align-items-center py-4 px-4"
+      >
+        <div class="col-md-4 text-muted">2023 - BRKE</div>
+        <div class="col-md-4 text-center">
+          <NuxtLink to="/">
+            <img src="~/assets/logo-picture.svg" height="35" />
+          </NuxtLink>
+        </div>
+        <div class="col-md-4 text-end">
+          <NuxtLink to="/impresszum" class="text-decoration-none text-muted">
+            Impresszum
+          </NuxtLink>
+        </div>
       </div>
     </footer>
   </div>
