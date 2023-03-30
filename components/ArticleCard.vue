@@ -1,7 +1,8 @@
 <template>
   <div class="col">
-    <NuxtLink class="card" :href="`/cikkek/${category}/${slug}`">
+    <NuxtLink class="card" :href="`/cikkek/${category.slug}/${slug}`">
       <img :src="imageUrl" class="card-img-top" />
+      <div class="card-category">{{ category.name }}</div>
       <div class="card-body">
         <h5 class="card-title">{{ title }}</h5>
         <p class="card-text">{{ teaser }}</p>
@@ -13,7 +14,7 @@
 <script>
 export default {
   props: {
-    category: String,
+    category: Object,
     imageUrl: String,
     slug: String,
     teaser: String,
@@ -31,6 +32,24 @@ a {
 img {
   height: 15rem;
   object-fit: cover;
+}
+
+.card-category {
+  position: absolute;
+  right: 0;
+  top: 14rem;
+
+  width: 6rem;
+  padding: 0.2rem 0.8rem;
+
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  background-color: var(--bs-primary);
+
+  border-bottom-left-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
 }
 
 .card-title {
