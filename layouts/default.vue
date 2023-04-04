@@ -56,7 +56,7 @@
 
 <style>
 .nav-link {
-  padding-left: var(--bs-navbar-nav-link-padding-x);
+  padding-left: var(--bs-navbar-nav-link-padding-x) !important;
 }
 
 .nav-link.active {
