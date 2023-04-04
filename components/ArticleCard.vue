@@ -23,8 +23,13 @@ export default {
 }
 </script>
 
-<style scoped>
-a {
+<style scoped lang="scss">
+@import '~/assets/scss/main.scss';
+
+a.card {
+  max-width: 333px;
+  margin: auto;
+
   color: inherit;
   text-decoration: none;
 }
@@ -58,11 +63,16 @@ img {
 }
 
 .card-text {
-  height: 15rem;
   overflow: hidden;
 
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 10;
+}
+
+@include media-breakpoint-up(md) {
+  .card-text {
+    height: 15rem;
+  }
 }
 </style>

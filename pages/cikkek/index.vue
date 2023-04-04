@@ -9,7 +9,7 @@ const page = computed(() => (route.query.oldal ? Number(route.query.oldal) : 1))
 
 const getArticles = async () =>
   await find('articles', {
-    pagination: { pageSize: 4, page: page.value },
+    pagination: { pageSize: 8, page: page.value },
     populate: '*',
     sort: 'date:desc',
   })
