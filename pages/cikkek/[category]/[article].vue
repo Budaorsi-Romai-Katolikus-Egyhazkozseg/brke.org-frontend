@@ -43,6 +43,9 @@ const iconForURL = (url) =>
     </div>
     <div class="container" v-html="md.render(article.content)" />
     <div class="container">
+      <PhotoSwipeGallery galleryID="gallery" :images="article?.gallery?.data" />
+    </div>
+    <div class="container">
       <Attachment
         class="m-1"
         v-for="attachment in article.attachments.data"
