@@ -41,7 +41,7 @@ const iconForURL = (url) =>
         />
       </div>
     </div>
-    <div class="container" v-html="md.render(article.content)" />
+    <MarkdownContent :source="article.content" />
     <div class="container">
       <PhotoSwipeGallery galleryID="gallery" :images="article?.gallery?.data" />
     </div>
