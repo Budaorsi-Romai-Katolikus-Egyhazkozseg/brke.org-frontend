@@ -10,13 +10,13 @@ const homepage = (await find('homepage')).data.attributes
 const articles = await find('articles', {
   filters: { current: true },
   populate: '*',
+  sort: 'date:desc',
 })
 </script>
 
 <template>
   <div class="mb-3">
     <h1>Kezdőlap</h1>
-
 
     <MarkdownContent :source="homepage.content" />
     <div class="container">
