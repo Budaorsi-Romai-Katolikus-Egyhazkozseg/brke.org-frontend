@@ -5,9 +5,15 @@ useHead({ title: `Inga-Tábor - ${titlePostfix}` })
 </script>
 
 <template>
-  <h1 class="card-title">Inga-tábor</h1>
-
-  <p>
-    <i>A jelentkezési lehetőség hamarosan megnyílik, kis türelmet kérünk!</i>
-  </p>
+  <iframe
+    src="https://docs.google.com/forms/d/e/1FAIpQLSdHTpCYHA3Dsm12MgMo8tNIAepJ9LXIxpeYphFepdp2QnizSg/viewform?embedded=true"
+    class="flex-grow-1"
+    width="100%"
+    height="100%"
+    frameborder="0"
+    marginheight="0"
+    marginwidth="0"
+  >
+    Jelentkezési lap betöltés alatt…
+  </iframe>
 </template>

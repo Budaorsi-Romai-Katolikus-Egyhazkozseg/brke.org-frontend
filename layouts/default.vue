@@ -31,7 +31,7 @@
         </nav>
       </div>
     </header>
-    <div class="container py-3">
+    <div class="container flex-grow-1 py-3 d-flex flex-column">
       <slot />
     </div>
     <footer class="bg-light border-top mt-auto pb-5">
