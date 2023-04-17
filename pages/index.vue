@@ -28,7 +28,8 @@ const articles = await find('articles', {
           :title="article.attributes.title"
           :imageUrl="
             cmsURL +
-            article.attributes.cover?.data?.attributes?.formats?.small?.url
+            (article.attributes.cover?.data?.attributes?.formats?.small?.url ??
+              article.attributes.cover?.data?.attributes?.url)
           "
           :teaser="article.attributes.teaser"
           :slug="article.attributes.slug"
