@@ -6,55 +6,15 @@ import { onBeforeRouteLeave } from 'vue-router'
 
 import { titlePostfix } from '~/utils/constants.ts'
 
+import { committees } from './data.json'
+
 useHead({ title: `Jelentkezés - ${titlePostfix}` })
 
 /* --- Data ---------------------------------------------------------------- */
 
-const committees = [
-  {
-    name: 'Hitéleti bizottság',
-    workgroups: [
-      'Templomgondozó munkacsoport',
-      'Liturgikus szolgálattevők munkacsoport',
-      'Imaháttér munkacsoport',
-    ],
-  },
-  {
-    name: 'Karitászbizottság',
-    workgroups: ['Karitász munkacsoport'],
-  },
-  {
-    name: 'Közösségi bizottság',
-    workgroups: [
-      'Családpasztorációs munkacsoport',
-      'Lelkiségi és közösségi munkacsoport',
-      'Ökumenikus munkacsoport',
-    ],
-  },
-  {
-    name: 'Evangelizációs bizottság',
-    workgroups: ['Evangelizációs munkacsoport'],
-  },
-  {
-    name: 'Kateketikai és Iskolabizottság',
-    workgroups: ['Kateketikai munkacsoport', 'Iskolai munkacsoport'],
-  },
-  {
-    name: 'Kommunikációs bizottság',
-    workgroups: ['Kommunikációs munkacsoport'],
-  },
-  {
-    name: 'Infrastrukturális bizottság',
-    workgroups: [
-      'Ingatlanfenntartó munkacsoport',
-      'Temetőfenntartási munkacsoport',
-    ],
-  },
-]
-
 const workgroups = committees.flatMap((c) =>
   c.workgroups.map((wg) => ({
-    name: wg,
+    ...wg,
     committee: c.name,
   }))
 )
@@ -445,7 +405,7 @@ const submit = async () => {
                   v-model="selectedWorkgroups"
                 />
                 <label class="form-check-label" :for="workgroup.name">
-                  {{ workgroup.name }}
+                  <b>{{ workgroup.name }}</b>
                 </label>
                 <div
                   class="form-check"
@@ -462,9 +422,10 @@ const submit = async () => {
                     class="form-check-label"
                     :for="`${workgroup.name}-${workgroup.committee}`"
                   >
-                    {{ workgroup.committee }}
+                    <b>{{ workgroup.committee }}</b>
                   </label>
                 </div>
+                <p>{{ workgroup.description }}</p>
               </div>
             </div>
             <div class="invalid-feedback">{{ workgroupsError }}</div>
