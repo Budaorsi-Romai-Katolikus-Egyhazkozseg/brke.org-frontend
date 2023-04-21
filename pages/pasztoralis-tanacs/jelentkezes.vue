@@ -19,12 +19,13 @@ const workgroups = committees.flatMap((c) =>
   }))
 )
 
-const deadline = moment('2023-04-19')
+const deadline = moment('2023-05-06')
 
 /* --- State --------------------------------------------------------------- */
 
 // fill, check, success
 const state = ref('fill')
+const interacted = ref(false)
 
 const messages = ref([])
 
@@ -34,6 +35,7 @@ const isSubmitting = ref(false)
 
 onBeforeRouteLeave(
   (to, from) =>
+    !interacted.value ||
     state.value === 'success' ||
     window.confirm('Az oldal elhagyásakor a mezők tartalma elveszik!')
 )
@@ -45,7 +47,7 @@ const uploadImage = async (file) => {
   formdata.append('image', file)
 
   const response = await fetch(
-    'https://api.imgbb.com/1/upload?key=3f9e01c74d51ec8c8d9213574ebbcbe8',
+    'https://api.imgbb.com/1/upload?key=d220a87ad22ee2c2b8276cab4982ac83',
     {
       method: 'post',
       body: formdata,
@@ -163,7 +165,7 @@ const hasSelectedCommittee = computed(
 const about = ref('')
 const aboutError = computed(() => {
   if (about.value.length < 50) {
-    return 'Kérjük, írj magadról egy rövid bemutatkozást!'
+    return 'Kérjük, írj magadról egy rövid (minimum 50 karakter) bemutatkozást!'
   }
 })
 
@@ -263,7 +265,7 @@ const submit = async () => {
 </script>
 
 <template>
-  <div class="row g-2 mb-3">
+  <div>
     <div class="toast-container position-fixed top-0 end-0 p-3">
       <div
         v-for="message in messages"
@@ -285,6 +287,7 @@ const submit = async () => {
         </div>
       </div>
     </div>
+
     <Transition>
       <div class="card" v-if="state === 'fill'">
         <div class="card-body">
@@ -316,7 +319,11 @@ const submit = async () => {
             Jelentkezési határidő: {{ deadline.format('YYYY. MM. DD.') }}
           </p>
 
-          <form class="row g-3 needs-validation my-2" novalidate>
+          <form
+            class="row g-3 needs-validation my-2"
+            novalidate
+            @input="interacted = true"
+          >
             <FormInput
               autocomplete="name"
               :error="nameError"
@@ -495,7 +502,8 @@ const submit = async () => {
                   v-model="privacy"
                 />
                 <label class="form-check-label" for="privacy">
-                  Elfogadom az adatkezelési nyilatkozatot
+                  Hozzájárulok személyes adataimnak a pasztorális tanács
+                  működéséhez szükséges nyilvántartásához és kezeléséhez.
                 </label>
                 <div class="invalid-feedback">{{ privacyError }}</div>
               </div>

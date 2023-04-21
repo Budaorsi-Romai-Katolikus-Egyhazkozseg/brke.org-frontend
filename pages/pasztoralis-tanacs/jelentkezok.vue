@@ -77,7 +77,7 @@ const countWorkgroup = computed(
 <template>
   <div
     v-if="applicants.length > 0"
-    class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-2"
+    class="row row-cols-1 row-cols-lg-2 row-cols-xxl-3 g-2"
   >
     <h2>Jelentkezők</h2>
     <table class="table table-sm table-striped mb-0">
