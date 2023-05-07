@@ -3,53 +3,13 @@ import { ref, computed } from 'vue'
 
 import { titlePostfix } from '~/utils/constants.ts'
 
-useHead({ title: `Jelentkezés - ${titlePostfix}` })
+import { committees } from './data.json'
+
+useHead({ title: `Jelentkezők - ${titlePostfix}` })
 
 const key = ref('')
 const error = ref(false)
 const applicants = ref([])
-
-const committees = [
-  {
-    name: 'Hitéleti bizottság',
-    workgroups: [
-      'Templomgondozó munkacsoport',
-      'Liturgikus szolgálattevők munkacsoport',
-      'Imaháttér munkacsoport',
-    ],
-  },
-  {
-    name: 'Karitászbizottság',
-    workgroups: ['Karitász munkacsoport'],
-  },
-  {
-    name: 'Közösségi bizottság',
-    workgroups: [
-      'Családpasztorációs munkacsoport',
-      'Lelkiségi és közösségi munkacsoport',
-      'Ökumenikus munkacsoport',
-    ],
-  },
-  {
-    name: 'Evangelizációs bizottság',
-    workgroups: ['Evangelizációs munkacsoport'],
-  },
-  {
-    name: 'Kateketikai és Iskolabizottság',
-    workgroups: ['Kateketikai munkacsoport', 'Iskolai munkacsoport'],
-  },
-  {
-    name: 'Kommunikációs bizottság',
-    workgroups: ['Kommunikációs munkacsoport'],
-  },
-  {
-    name: 'Infrastrukturális bizottság',
-    workgroups: [
-      'Ingatlanfenntartó munkacsoport',
-      'Temetőfenntartási munkacsoport',
-    ],
-  },
-]
 
 const getApplicants = async () => {
   const result = await (
@@ -70,7 +30,8 @@ const countCommittee = computed(
 )
 
 const countWorkgroup = computed(
-  () => (wg) => applicants.value.filter((a) => a.workgroups.includes(wg)).length
+  () => (wg) =>
+    applicants.value.filter((a) => a.workgroups.includes(wg.name)).length
 )
 </script>
 
@@ -94,7 +55,7 @@ const countWorkgroup = computed(
                 class="list-group-item"
               >
                 <span class="num">{{ countWorkgroup(workgroup) }}</span> -
-                {{ workgroup }}
+                {{ workgroup.name }}
               </li>
             </ul>
           </td>

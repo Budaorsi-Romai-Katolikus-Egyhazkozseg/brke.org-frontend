@@ -19,7 +19,7 @@ const workgroups = committees.flatMap((c) =>
   }))
 )
 
-const deadline = moment('2023-05-06')
+const deadline = moment('2023-05-28')
 
 /* --- State --------------------------------------------------------------- */
 
