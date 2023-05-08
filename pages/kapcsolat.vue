@@ -127,7 +127,7 @@ useHead({ title: `Kapcsolat - ${titlePostfix}` })
           </div>
           <div class="card-footer">
             <p class="mb-1">
-              Kérjük a híveket, amennyiben számlát kérnek a Plábánia Hivatal
+              Kérjük a híveket, amennyiben számlát kérnek a Plébánia Hivatal
               nevére, az itt található adatokat adják meg a vásárlásnál. Ettől
               eltérő számlázási címet a Plébánia Hivatalnak számviteli okokból
               nem áll módjában befogadni.
