@@ -25,13 +25,12 @@ const getApplicants = async () => {
   }
 }
 
-const countCommittee = computed(
-  () => (c) => applicants.value.filter((a) => a.committees.includes(c)).length
+const getCommittee = computed(
+  () => (c) => applicants.value.filter((a) => a.committees.includes(c))
 )
 
-const countWorkgroup = computed(
-  () => (wg) =>
-    applicants.value.filter((a) => a.workgroups.includes(wg.name)).length
+const getWorkgroup = computed(
+  () => (wg) => applicants.value.filter((a) => a.workgroups.includes(wg.name))
 )
 </script>
 
@@ -45,8 +44,20 @@ const countWorkgroup = computed(
       <tbody>
         <tr v-for="committee in committees">
           <td>
-            <span class="num">{{ countCommittee(committee.name) }}</span> -
-            {{ committee.name }}
+            <details>
+              <summary>
+                <span class="num">{{
+                  getCommittee(committee.name).length
+                }}</span>
+                -
+                {{ committee.name }}
+              </summary>
+              <ul>
+                <li v-for="applicant in getCommittee(committee.name)">
+                  {{ applicant.name }}
+                </li>
+              </ul>
+            </details>
           </td>
           <td>
             <ul class="list-group list-group-flush">
@@ -54,8 +65,20 @@ const countWorkgroup = computed(
                 v-for="workgroup in committee.workgroups"
                 class="list-group-item"
               >
-                <span class="num">{{ countWorkgroup(workgroup) }}</span> -
-                {{ workgroup.name }}
+                <details>
+                  <summary>
+                    <span class="num">{{
+                      getWorkgroup(workgroup).length
+                    }}</span>
+                    -
+                    {{ workgroup.name }}
+                  </summary>
+                  <ul>
+                    <li v-for="applicant in getWorkgroup(workgroup)">
+                      {{ applicant.name }}
+                    </li>
+                  </ul>
+                </details>
               </li>
             </ul>
           </td>
