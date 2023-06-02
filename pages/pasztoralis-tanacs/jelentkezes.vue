@@ -23,12 +23,13 @@ const deadline = moment('2023-05-28')
 
 /* --- State --------------------------------------------------------------- */
 
-// fill, check, success
+// load, fill, check, success
 const state = ref('fill')
 const interacted = ref(false)
 
 const messages = ref([])
 
+const isLoading = ref(false)
 const validated = ref(false)
 const isUploading = ref(false)
 const isSubmitting = ref(false)
@@ -49,7 +50,7 @@ const uploadImage = async (file) => {
   const response = await fetch(
     'https://api.imgbb.com/1/upload?key=d220a87ad22ee2c2b8276cab4982ac83',
     {
-      method: 'post',
+      method: 'POST',
       body: formdata,
     }
   )
@@ -67,6 +68,11 @@ const submitData = (data) =>
       },
       body: JSON.stringify(data),
     }
+  )
+
+const getPreviousData = ({ name, birth }) =>
+  fetch(
+    `https://eu-central-1.aws.data.mongodb-api.com/app/brke-wpsqn/endpoint/datafornameandbirth?name=${name}&birth=${birth}`
   )
 
 /* --- Fields and validation ----------------------------------------------- */
@@ -173,13 +179,12 @@ const photo = ref(undefined)
 const photoSelected = (event) => {
   photo.value = event.target.files[0]
 }
+const photoUrl = ref('')
 const photoError = computed(() => {
-  if (!photo.value) {
+  if (!photo.value && !photoUrl.value) {
     return 'Kérjük, tölts fel magadról egy fényképet!'
   }
 })
-
-const photoUrl = ref('')
 
 const privacy = ref(false)
 const privacyError = computed(() => {
@@ -200,6 +205,33 @@ const errors = computed(() => [
   hasSelectedCommittee.value && photoError,
   privacyError,
 ])
+
+const load = async () => {
+  isLoading.value = true
+  const data = await (
+    await getPreviousData({ name: name.value, birth: birth.value })
+  ).json()
+
+  if (data.length > 0) {
+    const last = data.at(-1)
+
+    address.value = last.address
+    occupation.value = last.occupation
+    phone.value = last.phone
+    email.value = last.email
+    selectedWorkgroups.value = last.workgroups
+    selectedCommittees.value = last.committees
+    about.value = last.about
+    photoUrl.value = last.photo
+    privacy.value = true
+
+    state.value = 'fill'
+  } else {
+    messages.value.push('Nem található jelentkezés a megadott adatokkal.')
+  }
+
+  isLoading.value = false
+}
 
 const validate = async (event) => {
   validated.value = true
@@ -289,7 +321,70 @@ const submit = async () => {
     </div>
 
     <Transition>
-      <div class="card" v-if="state === 'fill'">
+      <div class="card" v-if="state === 'load'">
+        <div class="card-body">
+          <h3 class="card-title">Jelentkezés szerkesztése</h3>
+
+          <p class="my-1">
+            Kérjük add meg a neved és a születési dátumodat egy korábban leadott
+            jelentkezés adatainak betöltéséhez!
+          </p>
+
+          <form
+            class="row g-3 needs-validation my-2"
+            novalidate
+            @input="interacted = true"
+          >
+            <FormInput
+              autocomplete="name"
+              :error="nameError"
+              :forceDirty="validated"
+              icon="person"
+              name="name"
+              title="Név"
+              type="text"
+              v-model="name"
+              width="4"
+            />
+
+            <FormInput
+              autocomplete="bday"
+              :error="birthError"
+              :forceDirty="validated"
+              icon="calendar-date"
+              name="birth"
+              title="Születési dátum"
+              type="date"
+              v-model="birth"
+              width="4"
+            />
+
+            <div class="col-12">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                @click="state = 'fill'"
+              >
+                Mégsem
+              </button>
+              <button
+                type="button"
+                class="btn btn-primary mx-2"
+                :disabled="isLoading"
+                @click="load"
+              >
+                Betöltés
+                <span
+                  v-if="isLoading"
+                  class="spinner-border spinner-border-sm"
+                ></span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="card" v-else-if="state === 'fill'">
         <div class="card-body">
           <h3 class="card-title">Jelentkezés</h3>
 
@@ -336,7 +431,17 @@ const submit = async () => {
               width="4"
             />
 
-            <br />
+            <div class="col-lg-8 d-flex flex-row-reverse align-items-end">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                @click="state = 'load'"
+              >
+                Korábban leadott jelentkezés szerkesztése
+              </button>
+            </div>
+
+            <!-- <br /> -->
 
             <FormInput
               autocomplete="street-address"

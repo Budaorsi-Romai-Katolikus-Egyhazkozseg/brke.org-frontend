@@ -19,7 +19,12 @@ const getApplicants = async () => {
   ).json()
 
   if (result.success) {
-    applicants.value = result.data
+    applicants.value = result.data.filter(
+      (a, i) =>
+        !result.data
+          .slice(i + 1)
+          .find((b) => a.name === b.name && a.birth === b.birth)
+    )
   } else {
     error.value = true
   }
