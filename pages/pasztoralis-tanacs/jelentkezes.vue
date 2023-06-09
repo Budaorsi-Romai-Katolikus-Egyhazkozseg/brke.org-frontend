@@ -6,7 +6,7 @@ import { onBeforeRouteLeave } from 'vue-router'
 
 import { titlePostfix } from '~/utils/constants.ts'
 
-import { committees } from './data.json'
+import committees from './committees.json'
 
 useHead({ title: `Jelentkezés - ${titlePostfix}` })
 

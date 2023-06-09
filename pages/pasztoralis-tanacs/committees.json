@@ -1,0 +1,93 @@
+[
+  {
+    "name": "Hitéleti bizottság",
+    "workgroups": [
+      {
+        "name": "Templomgondozó munkacsoport",
+        "description": "Az évközi liturgiához, a liturgikus időszakokhoz (pl. advent, nagyböjt) és liturgikus eseményekhez (pl. keresztelő, esküvő, Úrnapja) szükséges eszközök biztosítása, karbantartása, tárolása, előkészítése (pl. ministránsruhák, zászlók, baldachin, Betlehem, karácsonyfa, szent sír, stb.), templomtakarítás."
+      },
+      {
+        "name": "Liturgikus szolgálattevők munkacsoport",
+        "description": "Ministránsok, lelkipásztori munkatársak és zenei szolgálatot adók tevékenységének összehangolása, az egyes szolgálatok és a közösen végzett szolgálatok begyakorlása, próbája, egymás támogatása."
+      },
+      {
+        "name": "Imaháttér munkacsoport",
+        "description": "A plébániai közösség eseményeiért, a közösség tagjaiért imaháttér biztosítása, személyes imaháttér vállalása, a közösséget otthonról imájukkal éltető betegek, idősek számon tartása, látogatása, tájékoztatása, bekapcsolása a közösségbe."
+      }
+    ]
+  },
+  {
+    "name": "Karitászbizottság",
+    "workgroups": [
+      {
+        "name": "Karitász munkacsoport",
+        "description": "A plébániai közösségen belül és azon kívül is a rászorulók felkutatása, anyagi és természetbeni támogatása, eseti és folyamatos adománygyűjtések lebonyolítása, az adományok eljuttatása a rászorulóknak, adományok kezelése, tárolása, rendszerezése, együttműködés más karitatív szervezetekkel."
+      }
+    ]
+  },
+  {
+    "name": "Közösségi bizottság",
+    "workgroups": [
+      {
+        "name": "Családpasztorációs munkacsoport",
+        "description": "Családok lelki és mentális támogatása, rendszeres látogatása, baba-mama klub támogatása, családok bekapcsolódásának elősegítése a plébániai közösségbe, jegyesfelkészítés."
+      },
+      {
+        "name": "Lelkiségi és közösségi munkacsoport",
+        "description": "A plébániai közösségen belül megtalálható jelenleg mintegy húsz kisebb közösség (lelkiségi mozgalmak, cserkészek, asszonykör, Párkapocs Egyesület, stb.) tevékenységének támogatása, a közösségbe tartozás elősegítése."
+      },
+      {
+        "name": "Ökumenikus munkacsoport",
+        "description": "A városban  működő felekezetekkel való kapcsolattartás, közös programok előmozdítása."
+      }
+    ]
+  },
+  {
+    "name": "Evangelizációs bizottság",
+    "workgroups": [
+      {
+        "name": "Evangelizációs munkacsoport",
+        "description": "Olyan alkalmak kezdeményezése, melyeken tanúságtétellel másokban érdeklődést ébreszthetünk Isten szeretete és az ő szeretetét megjeleníteni törekvő közösségünk iránt, lakótelepi és egyéb evangelizálás, Alfa kurzus vagy hasonló program megvalósítása keresőknek."
+      }
+    ]
+  },
+  {
+    "name": "Kateketikai és Iskolabizottság",
+    "workgroups": [
+      {
+        "name": "Kateketikai munkacsoport",
+        "description": "Felnőtt és ifjúsági katekézis folyamatos támogatása, a katekumenátus működésének támogatása, befogadó csoportokban való részvétel, beavató szentségeket kérők kísérése."
+      },
+      {
+        "name": "Iskolai munkacsoport",
+        "description": "A katolikus iskola és óvoda plébániai pasztorációval összhangban végzett tevékenységének támogatása, kapcsolattartás, a különböző iskolákban működő hitoktatók munkájának segítése, hittankönyvek szállítása, tárolása, nyilvántartása."
+      }
+    ]
+  },
+  {
+    "name": "Kommunikációs bizottság",
+    "workgroups": [
+      {
+        "name": "Kommunikációs munkacsoport",
+        "description": "A plébániai kommunikációs rendszer felállítása, a plébániai közösség híreinek kezelése a közösség tagjai felé levelezőlistákon, a plébániai honlapon, facebook-oldalon, és újság (Élünk) formában, a  honlap megújítása és karbantartása, híradás megszervezése a média felé, plakát készítés, hirdető táblák feltöltése, karbantartása, vasárnapi értesítő összeállítása, nyomtatása és kiosztása. A belső- és külső használatú IT rendszerek üzemeltetése. Gondoskodás az informatikai felületeket nem használó közösségi tagok időszerű hírekkel való ellátásáról."
+      }
+    ]
+  },
+  {
+    "name": "Infrastrukturális bizottság",
+    "workgroups": [
+      {
+        "name": "Ingatlanfenntartó munkacsoport",
+        "description": "A plébániához tartozó épületek és ezek telkeinek (jelenleg: templom, három kápolna, Szent Márton Ház) fenntartása, rendszeres karbantartása, állagmegóvása, a szükséges javítások elvégzése vagy elvégeztetése, javaslattétel fejlesztésre, együttműködés a fejlesztés megvalósításában. "
+      },
+      {
+        "name": "Eszközkezelő munkacsoport",
+        "description": "Elektronikus és informatikai feladatok ellátása (mint pl. templomi hangosítás, világítás, és templomon kívüli liturgikus események hangosítása;  Nyitott Templom program, keresztút a Kálvárián, Úrnapja, feltámadási körmenet, stb.), valamint a plébániához tartozó, de nem liturgikus eszközök, ingóságok karbantartása, fenntartása (mint pl. bútorok, szőnyegek, függönyök, könyvek, kukák, komposztládák, tablók, sörpadok és sörasztalok, sátrak, stb.)."
+      },
+      {
+        "name": "Temetőfenntartási munkacsoport",
+        "description": "A régitemető (Nefelejcs utcai) és az ótemetőben lévő ravatalozó üzemeltetésére kötött szerződés betartásának ellenőrzése, a temetővel kapcsolatban a plébániára érkező megkeresések kezelése, az urnatemetővel kapcsolatban felmerülő időszerű feladatok lebonyolítása, temetőgondnoki feladat megszervezése, ellátása."
+      }
+    ]
+  }
+]

@@ -3,7 +3,7 @@ import { ref, computed } from 'vue'
 
 import { titlePostfix } from '~/utils/constants.ts'
 
-import { committees } from './data.json'
+import committees from './committees.json'
 
 useHead({ title: `Jelentkezők - ${titlePostfix}` })
 
