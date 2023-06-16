@@ -5,7 +5,7 @@ useHead({ title: `Pasztorális Tanács - ${titlePostfix}` })
 </script>
 
 <template>
-  <h1 class="card-title">Pasztorális Tanács</h1>
+  <h1>Pasztorális Tanács</h1>
 
   <p>
     Ahogy már a hirdetésekben hallottuk, megkezdődött a budaörsi
