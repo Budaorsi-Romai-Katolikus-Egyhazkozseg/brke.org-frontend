@@ -2,3 +2,26 @@ $primary: #fac42b; // BRKE Yellow
 $link-color: darken($primary, 25%);
 
 @import 'bootstrap/scss/bootstrap.scss';
+
+blockquote {
+  position: relative;
+
+  margin-left: 28px;
+  border-left: 4px solid $primary;
+  padding-left: 8px;
+
+  font-style: italic;
+}
+
+blockquote::before {
+  content: '\F6B0';
+
+  position: absolute;
+  top: -12px;
+  left: -32px;
+
+  rotate: 180deg;
+
+  font-family: bootstrap-icons;
+  font-size: 30px;
+}
