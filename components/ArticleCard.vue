@@ -28,6 +28,8 @@ export default {
 
 a.card {
   max-width: 333px;
+  height: 100%;
+
   margin: auto;
 
   color: inherit;
@@ -57,10 +59,10 @@ img {
   border-top-left-radius: 0.5rem;
 }
 
-.card-title {
-  height: 5rem;
-  overflow: hidden;
-}
+// .card-title {
+//   height: 5rem;
+//   overflow: hidden;
+// }
 
 .card-text {
   overflow: hidden;
@@ -70,9 +72,9 @@ img {
   -webkit-line-clamp: 10;
 }
 
-@include media-breakpoint-up(md) {
-  .card-text {
-    height: 15rem;
-  }
-}
+// @include media-breakpoint-up(md) {
+//   .card-text {
+//     height: 15rem;
+//   }
+// }
 </style>
