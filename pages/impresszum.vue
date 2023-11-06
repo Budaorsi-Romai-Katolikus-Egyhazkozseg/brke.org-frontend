@@ -18,8 +18,10 @@ useHead({ title: `Impresszum - ${titlePostfix}` })
             <Person name="Donkó István" email="donko.istvan@brke.org" />
           </People>
 
-          <People title="Szerkesztő">
+          <People title="Szerkesztők">
             <Person name="Donkó Eszter" />
+            <Person name="Papp Zoltán" />
+            <Person name="Rábainé Balics Eszter" />
           </People>
         </dl>
       </div>
