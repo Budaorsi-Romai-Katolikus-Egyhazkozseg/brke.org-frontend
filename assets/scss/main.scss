@@ -25,3 +25,12 @@ blockquote::before {
   font-family: bootstrap-icons;
   font-size: 30px;
 }
+
+blockquote footer {
+  text-align: right;
+}
+
+blockquote cite {
+  font-style: normal;
+  font-size: smaller;
+}
