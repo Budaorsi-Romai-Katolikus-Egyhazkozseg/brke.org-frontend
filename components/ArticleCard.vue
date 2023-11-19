@@ -46,7 +46,7 @@ img {
   right: 0;
   top: 14rem;
 
-  width: 6rem;
+  // width: 6rem;
   padding: 0.2rem 0.8rem;
 
   font-size: 0.75rem;
