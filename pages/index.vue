@@ -15,10 +15,12 @@ const articles = await find('articles', {
 </script>
 
 <template>
-  <div class="mb-3">
+  <div class="mb-3 d-flex flex-column gap-2">
     <h1>Kezdőlap</h1>
 
     <MarkdownContent :source="homepage.content" />
+
+    <EventList />
     <div class="container">
       <h2>Aktuális / Kiemelt cikkek</h2>
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">

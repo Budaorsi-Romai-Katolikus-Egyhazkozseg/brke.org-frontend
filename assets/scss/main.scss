@@ -1,7 +1,13 @@
 $primary: #fac42b; // BRKE Yellow
 $link-color: darken($primary, 25%);
+$font-family-base: 'Noto Sans';
+$font-family-monospace: 'Noto Sans Mono';
 
 @import 'bootstrap/scss/bootstrap.scss';
+
+.fs-sm {
+  font-size: $font-size-sm;
+}
 
 blockquote {
   position: relative;

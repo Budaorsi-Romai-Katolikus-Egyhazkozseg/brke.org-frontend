@@ -14,7 +14,13 @@ export default defineNuxtConfig({
     },
   },
   css: ['~/assets/scss/main.scss', 'bootstrap-icons/font/bootstrap-icons.css'],
-  modules: ['@nuxtjs/strapi', 'nuxt-purgecss'],
+  googleFonts: {
+    families: {
+      'Noto+Sans': true,
+      'Noto+Sans+Mono': true,
+    },
+  },
+  modules: ['@nuxtjs/google-fonts', '@nuxtjs/strapi', 'nuxt-purgecss'],
   purgecss: { enabled: false, safelist: ['collapsing'] },
   router: { options: { linkActiveClass: 'active' } },
   ssr: false,
