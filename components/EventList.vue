@@ -7,7 +7,7 @@ const nowWithOffset = () => moment().add(offset.value, 'week')
 
 const loading = ref(false)
 
-const days = ref([])
+const dates = ref([])
 const events = ref([])
 const times = ref([])
 
@@ -50,8 +50,8 @@ watch(
         timeMax: nowWithOffset().endOf('isoWeek').toISOString(),
       })
 
-      days.value = Array.from({ length: 7 }, (_, i) =>
-        nowWithOffset().startOf('isoWeek').add(i, 'day').format('MM/DD'),
+      dates.value = Array.from({ length: 7 }, (_, i) =>
+        nowWithOffset().startOf('isoWeek').add(i, 'day').format('YYYY-MM-DD'),
       )
 
       events.value = result.items
@@ -96,13 +96,23 @@ watch(
     <div
       class="d-grid"
       :style="{
-        gridTemplateColumns: `repeat(${days.length}, 1fr)`,
+        gridTemplateColumns: `repeat(${dates.length}, 1fr)`,
         gridTemplateRows: `50px repeat(${times.length}, 35px)`,
       }"
     >
       <div
-        v-for="(day, index) in days"
-        class="title text-center lh-sm border-bottom"
+        v-for="(date, index) in dates"
+        :class="[
+          'text-center',
+          'lh-sm',
+          'border-bottom',
+
+          'd-flex',
+          'flex-column',
+          'justify-content-center',
+
+          ...(moment().format('YYYY-MM-DD') === date ? ['bg-primary'] : []),
+        ]"
         :style="{
           gridRow: 1,
           gridColumn: index + 1,
@@ -112,7 +122,9 @@ watch(
           <span class="d-md-none">{{ weekdayNames[index].slice(0, 3) }}</span>
           <span class="d-none d-md-block">{{ weekdayNames[index] }}</span>
         </div>
-        <div class="text-secondary fs-sm">{{ day }}</div>
+        <div class="text-secondary fs-sm">
+          {{ moment(date).format('MM/DD') }}
+        </div>
       </div>
 
       <div
@@ -128,11 +140,16 @@ watch(
       </div>
 
       <div
-        v-for="dt in days.flatMap((_, d) => times.map((_, t) => [d, t]))"
+        v-for="{ date, column, time, row } in dates.flatMap((date, column) =>
+          times.map((time, row) => ({ date, column, time, row })),
+        )"
         class="border-bottom"
         :style="{
-          gridRow: dt[1] + 2,
-          gridColumn: dt[0] + 1,
+          gridRow: row + 2,
+          gridColumn: column + 1,
+          ...(moment().format('YYYY-MM-DD') === date && {
+            background: 'rgba(var(--bs-primary-rgb), 0.1)', // '#fac42b20'
+          }),
         }"
       />
     </div>
