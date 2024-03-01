@@ -40,7 +40,7 @@ try {
 
     <EventList />
     <div class="container">
-      <h2>Aktuális / Kiemelt cikkek</h2>
+      <h2>Aktuális és kiemelt cikkek</h2>
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">
         <ArticleCard
           v-if="articles"

@@ -16,8 +16,8 @@ export default defineNuxtConfig({
   css: ['~/assets/scss/main.scss', 'bootstrap-icons/font/bootstrap-icons.css'],
   googleFonts: {
     families: {
-      'Noto+Sans': true,
-      'Noto+Sans+Mono': true,
+      'Noto+Sans': [400, 500, 600, 700],
+      'Noto+Sans+Mono': [400, 500, 600, 700],
     },
   },
   modules: ['@nuxtjs/google-fonts', '@nuxtjs/strapi', 'nuxt-purgecss'],

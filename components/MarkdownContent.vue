@@ -23,5 +23,5 @@ onMounted(() => {
 </script>
 
 <template>
-  <div ref="container" class="container" v-html="md.render(source)" />
+  <div ref="container" v-html="md.render(source)" />
 </template>
