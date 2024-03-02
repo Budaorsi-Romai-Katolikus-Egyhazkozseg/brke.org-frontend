@@ -5,9 +5,34 @@ import { computed, ref, watch } from 'vue'
 const cardHeight = 200
 
 const offset = ref(0)
+const decreaseOffset = () => {
+  window.plausible('Change Calendar Offset', {
+    props: { value: offset.value, direction: 'back' },
+  })
+  offset.value--
+}
+const increaseOffset = () => {
+  window.plausible('Change Calendar Offset', {
+    props: { value: offset.value, direction: 'forward' },
+  })
+  offset.value++
+}
 const nowWithOffset = () => moment().add(offset.value, 'week')
 
 const selectedEvent = ref()
+const selectEvent = (event) => {
+  if (selectedEvent.value?.id === event.id) {
+    selectedEvent.value = undefined
+  } else {
+    window.plausible('View Event Details', {
+      props: {
+        title: event.title,
+        titleWithDateAndTime: `${event.title} @ ${event.date} ${event.time}`,
+      },
+    })
+    selectedEvent.value = event
+  }
+}
 
 const loading = ref(false)
 
@@ -92,13 +117,13 @@ watch(
         :style="{ minWidth: '225px' }"
       >
         <div v-if="loading" class="spinner-border text-primary" />
-        <button class="btn" @click="offset--">
+        <button class="btn" @click="decreaseOffset">
           <i class="bi bi-chevron-left"></i>
         </button>
         <span class="text-center" :style="{ minWidth: '105px' }">
           {{ nowWithOffset().year() }} / {{ nowWithOffset().isoWeek() }}. hét
         </span>
-        <button class="btn" @click="offset++">
+        <button class="btn" @click="increaseOffset">
           <i class="bi bi-chevron-right"></i>
         </button>
       </div>
@@ -161,11 +186,7 @@ watch(
           alignSelf: 'center',
           cursor: 'pointer',
         }"
-        @click="
-          selectedEvent?.id === event.id
-            ? (selectedEvent = undefined)
-            : (selectedEvent = event)
-        "
+        @click="selectEvent(event)"
       >
         <span
           :class="[
