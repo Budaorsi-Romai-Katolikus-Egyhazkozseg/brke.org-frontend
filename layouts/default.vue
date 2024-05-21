@@ -38,7 +38,9 @@
       <div
         class="container d-flex justify-content-between align-items-center py-4 px-4"
       >
-        <div class="col-md-4 text-muted">2023 - BRKE</div>
+        <div class="col-md-4 text-muted">
+          BRKE · 2023 - {{ new Date().getFullYear() }}
+        </div>
         <div class="col-md-4 text-center">
           <NuxtLink to="/">
             <img src="~/assets/logo-picture.svg" height="35" />

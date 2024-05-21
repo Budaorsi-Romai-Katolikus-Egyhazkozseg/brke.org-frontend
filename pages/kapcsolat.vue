@@ -13,45 +13,52 @@ useHead({ title: `Kapcsolat - ${titlePostfix}` })
     </p> -->
 
     <div class="card">
-      <div class="card-body">
-        <h2 class="card-title">Elérhetőségek</h2>
-        <table class="table-sm">
-          <tbody>
-            <tr>
-              <td><i class="bi bi-geo-alt-fill"></i></td>
-              <td>Cím:</td>
-              <td>2040 Budaörs, Esze Tamás u. 1.</td>
-            </tr>
-            <tr>
-              <td><i class="bi bi-telephone-fill"></i></td>
-              <td>Telefon / Fax:</td>
-              <td>+36 23 440 414</td>
-            </tr>
-            <tr>
-              <td><i class="bi bi-envelope-fill"></i></td>
-              <td>E-mail:</td>
-              <td>
-                <a href="plebaniahivatal@brke.org" target="_blank">
-                  plebaniahivatal@brke.org
-                </a>
-              </td>
-            </tr>
-            <tr>
-              <td><i class="bi bi-facebook"></i></td>
-              <td>Facebook:</td>
-              <td>
-                <a href="https://www.facebook.com/brke.org">
-                  facebook.com/brke.org
-                </a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <div class="mt-1">
-          <b>A hivatal nyitvatartása</b> (vasárnap kivételével):
+      <div class="card-body row">
+        <div class="col-sm-12 col-lg-6">
+          <h2 class="card-title">Elérhetőségek</h2>
+          <table class="table-sm">
+            <tbody>
+              <tr>
+                <td><i class="bi bi-geo-alt-fill" /></td>
+                <td>Cím:</td>
+                <td>2040 Budaörs, Esze Tamás u. 1.</td>
+              </tr>
+              <tr>
+                <td><i class="bi bi-telephone-fill" /></td>
+                <td>Telefon / Fax:</td>
+                <td>+36 23 440 414</td>
+              </tr>
+              <tr>
+                <td><i class="bi bi-envelope-fill" /></td>
+                <td>E-mail:</td>
+                <td>
+                  <a href="plebaniahivatal@brke.org" target="_blank">
+                    plebaniahivatal@brke.org
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td><i class="bi bi-facebook"></i></td>
+                <td>Facebook:</td>
+                <td>
+                  <a href="https://www.facebook.com/brke.org">
+                    facebook.com/brke.org
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="mt-1 col-sm-12 col-lg-6">
+          <b>A hivatal nyitvatartása</b>
           <ul class="mb-0">
-            <li>délelőtt 9-11 óráig</li>
-            <li>délután 17-18 óráig</li>
+            <li>Hétfő: 16-18 óra</li>
+            <li>Kedd: 16-18 óra</li>
+            <li>Szerda: 9-12 óra és 16-18 óra</li>
+            <li>Csütörtök: 16-18 óra</li>
+            <li>Péntek: 10-12 óra</li>
+            <li>Szombat: zárva</li>
+            <li>Vasárnap: zárva</li>
           </ul>
         </div>
       </div>
