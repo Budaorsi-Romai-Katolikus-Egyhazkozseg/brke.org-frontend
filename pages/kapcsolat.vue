@@ -1,7 +1,13 @@
 <script setup>
+import moment from 'moment'
+
 import { titlePostfix } from '~/utils/constants.ts'
 
 useHead({ title: `Kapcsolat - ${titlePostfix}` })
+
+const startOfSummer = moment({ month: 6, day: 7 }).startOf('isoWeek')
+const endOfSummer = moment({ month: 8 }).startOf('isoWeek').subtract(1, 'day')
+const isSummer = moment().isBetween(startOfSummer, endOfSummer)
 </script>
 
 <template>
@@ -50,16 +56,75 @@ useHead({ title: `Kapcsolat - ${titlePostfix}` })
           </table>
         </div>
         <div class="mt-1 col-sm-12 col-lg-6">
-          <b>A hivatal nyitvatartása</b>
-          <ul class="mb-0">
-            <li>Hétfő: 16-18 óra</li>
-            <li>Kedd: 16-18 óra</li>
-            <li>Szerda: 9-12 óra és 16-18 óra</li>
-            <li>Csütörtök: 16-18 óra</li>
-            <li>Péntek: 10-12 óra</li>
-            <li>Szombat: zárva</li>
-            <li>Vasárnap: zárva</li>
-          </ul>
+          <h5 class="d-inline">
+            A hivatal nyitvatartása
+            <small class="text-muted">(2024. május óta):</small>
+          </h5>
+          <div class="accordion" id="openingHours">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button p-2"
+                  :class="{ collapsed: isSummer }"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#general"
+                >
+                  Általános időszakban
+                </button>
+              </h2>
+              <div
+                id="general"
+                class="accordion-collapse collapse"
+                :class="{ show: !isSummer }"
+                data-bs-parent="#openingHours"
+              >
+                <div class="accordion-body p-1">
+                  <ul class="mb-0">
+                    <li>Hétfő: 16-18 óra</li>
+                    <li>Kedd: 16-18 óra</li>
+                    <li>Szerda: 9-12 óra és 16-18 óra</li>
+                    <li>Csütörtök: 16-18 óra</li>
+                    <li>Péntek: 10-12 óra</li>
+                    <li>Szombat: zárva</li>
+                    <li>Vasárnap: zárva</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button p-2"
+                  :class="{ collapsed: !isSummer }"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#summer"
+                >
+                  Nyáron ({{ startOfSummer.format('MM/DD') }} -
+                  {{ endOfSummer.format('MM/DD') }})
+                </button>
+              </h2>
+              <div
+                id="summer"
+                class="accordion-collapse collapse"
+                :class="{ show: isSummer }"
+                data-bs-parent="#openingHours"
+              >
+                <div class="accordion-body p-1">
+                  <ul class="mb-0">
+                    <li>Hétfő: 16-18 óra</li>
+                    <li>Kedd: zárva</li>
+                    <li>Szerda: 16-18 óra</li>
+                    <li>Csütörtök: zárva</li>
+                    <li>Péntek: 10-12 óra</li>
+                    <li>Szombat: zárva</li>
+                    <li>Vasárnap: zárva</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
