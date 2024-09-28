@@ -38,7 +38,7 @@ const isSummer = moment().isBetween(startOfSummer, endOfSummer)
                 <td><i class="bi bi-envelope-fill" /></td>
                 <td>E-mail:</td>
                 <td>
-                  <a href="plebaniahivatal@brke.org" target="_blank">
+                  <a href="mailto:plebaniahivatal@brke.org" target="_blank">
                     plebaniahivatal@brke.org
                   </a>
                 </td>
@@ -82,9 +82,9 @@ const isSummer = moment().isBetween(startOfSummer, endOfSummer)
                 <div class="accordion-body p-1">
                   <ul class="mb-0">
                     <li>Hétfő: 16-18 óra</li>
-                    <li>Kedd: 16-18 óra</li>
-                    <li>Szerda: 9-12 óra és 16-18 óra</li>
-                    <li>Csütörtök: 16-18 óra</li>
+                    <li>Kedd: zárva</li>
+                    <li>Szerda: 10-12 óra és 16-18 óra</li>
+                    <li>Csütörtök: zárva</li>
                     <li>Péntek: 10-12 óra</li>
                     <li>Szombat: zárva</li>
                     <li>Vasárnap: zárva</li>
