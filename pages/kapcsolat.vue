@@ -205,7 +205,7 @@ const isSummer = moment().isBetween(startOfSummer, endOfSummer)
               nem áll módjában befogadni.
             </p>
             <Attachment
-              url="https://drive.google.com/file/d/1FF4or5TU5nnwJPCX90LCkEcdakCJJOWi"
+              url="/dokumentumok/brke-szamlabefogadasi-iranyelvek-20250201.pdf"
               caption="Számlabefogadási irányelvek"
               icon="file-earmark-text"
             />
