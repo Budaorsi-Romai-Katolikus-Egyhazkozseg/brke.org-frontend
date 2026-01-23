@@ -217,12 +217,30 @@ const isSummer = moment().isBetween(startOfSummer, endOfSummer)
             <h3 class="card-title">Egyéb</h3>
             <ul class="mb-0">
               <li>
-                Egyházközségünk számlaszáma (CIB Bank Zrt.):
-                11103303-19828983-36000001
+                Budaörsi Római Katolikus Egyházközség
+                <ul>
+                  <li>Számlaszám: <code>11103303-19828983-36000001</code></li>
+                </ul>
               </li>
-              <li>Római Katolikus Egyház technikai száma: 0011</li>
-              <li>Caritas Alapítvány Budaörs adószáma: 19180210-1-13</li>
-              <li>Karizma Nevelési-Oktatási Alapítvány: 18681505-1-13</li>
+              <li>
+                Római Katolikus Egyház
+                <ul>
+                  <li>Technikai szám: <code>0011</code></li>
+                </ul>
+              </li>
+              <li>
+                Caritas Alapítvány Budaörs
+                <ul>
+                  <li>Adószám: <code>19180210-1-13</code></li>
+                  <li>Számlaszám: <code>11742173-20011473-00000000</code></li>
+                </ul>
+              </li>
+              <li>
+                Karizma Nevelési-Oktatási Alapítvány
+                <ul>
+                  <li>Adószám: <code>18681505-1-13</code></li>
+                </ul>
+              </li>
             </ul>
           </div>
         </div>
