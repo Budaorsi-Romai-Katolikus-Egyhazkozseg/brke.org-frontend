@@ -136,7 +136,7 @@ const isSummer = moment().isBetween(startOfSummer, endOfSummer)
           <div class="card-body">
             <h3 class="card-title">
               Stóladíjak
-              <small class="text-muted">(2022. január 15-től)</small>
+              <small class="text-muted">(2026. január 15-től)</small>
             </h3>
             <table
               class="table table-responsive table-sm"
@@ -145,28 +145,36 @@ const isSummer = moment().isBetween(startOfSummer, endOfSummer)
               <tbody>
                 <tr>
                   <td>Csendes mise:</td>
-                  <td>2.000 Ft</td>
+                  <td>3.000 Ft</td>
                 </tr>
                 <tr>
                   <td>Orgonás mise:</td>
-                  <td>4.000 Ft</td>
+                  <td>5.000 Ft</td>
                 </tr>
                 <tr>
                   <td>Esküvő kántor nélkül:</td>
-                  <td>20.000 Ft</td>
+                  <td>30.000 Ft</td>
                 </tr>
                 <tr>
                   <td>Esküvő kántorral:</td>
-                  <td>40.000 Ft</td>
+                  <td>50.000 Ft</td>
                 </tr>
+                <!--
                 <tr>
                   <td>Temetés kántor nélkül:</td>
                   <td>20.000 Ft</td>
                 </tr>
+                -->
                 <tr>
-                  <td>Temetés kántorral:</td>
-                  <td>35.000 Ft</td>
+                  <td>Temetés:</td>
+                  <td>50.000 Ft</td>
                 </tr>
+                <!--
+                <tr>
+                  <td>Sírkőmegáldás:</td>
+                  <td>7.000 Ft</td>
+                </tr>
+                -->
               </tbody>
             </table>
           </div>
