@@ -5,11 +5,11 @@ export default defineNuxtConfig({
   app: {
     head: {
       script: [
-        {
+        /* {
           defer: true,
           'data-domain': 'brke.org',
           src: 'https://analytics.brke.donko.hu/js/script.js',
-        },
+        }, */
       ],
     },
   },
