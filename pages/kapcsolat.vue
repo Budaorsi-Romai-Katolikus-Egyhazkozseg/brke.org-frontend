@@ -82,12 +82,12 @@ const isSummer = moment().isBetween(startOfSummer, endOfSummer)
                 <div class="accordion-body p-1">
                   <ul class="mb-0">
                     <li>Hétfő: 16-18 óra</li>
-                    <li>Kedd: zárva</li>
+                    <!-- <li>Kedd: zárva</li> -->
                     <li>Szerda: 10-12 óra és 16-18 óra</li>
-                    <li>Csütörtök: zárva</li>
+                    <!-- <li>Csütörtök: zárva</li> -->
                     <li>Péntek: 10-12 óra</li>
-                    <li>Szombat: zárva</li>
-                    <li>Vasárnap: zárva</li>
+                    <!-- <li>Szombat: zárva</li> -->
+                    <!-- <li>Vasárnap: zárva</li> -->
                   </ul>
                 </div>
               </div>
@@ -114,12 +114,12 @@ const isSummer = moment().isBetween(startOfSummer, endOfSummer)
                 <div class="accordion-body p-1">
                   <ul class="mb-0">
                     <li>Hétfő: 16-18 óra</li>
-                    <li>Kedd: zárva</li>
+                    <!-- <li>Kedd: zárva</li> -->
                     <li>Szerda: 16-18 óra</li>
-                    <li>Csütörtök: zárva</li>
+                    <!-- <li>Csütörtök: zárva</li> -->
                     <li>Péntek: 10-12 óra</li>
-                    <li>Szombat: zárva</li>
-                    <li>Vasárnap: zárva</li>
+                    <!-- <li>Szombat: zárva</li> -->
+                    <!-- <li>Vasárnap: zárva</li> -->
                   </ul>
                 </div>
               </div>
@@ -207,9 +207,9 @@ const isSummer = moment().isBetween(startOfSummer, endOfSummer)
           </div>
           <div class="card-footer">
             <p class="mb-1">
-              Kérjük a híveket, amennyiben számlát kérnek a Plébánia Hivatal
+              Kérjük a híveket, amennyiben számlát kérnek a Plébániahivatal
               nevére, az itt található adatokat adják meg a vásárlásnál. Ettől
-              eltérő számlázási címet a Plébánia Hivatalnak számviteli okokból
+              eltérő számlázási címet a Plébániahivatalnak számviteli okokból
               nem áll módjában befogadni.
             </p>
             <Attachment
@@ -225,15 +225,9 @@ const isSummer = moment().isBetween(startOfSummer, endOfSummer)
             <h3 class="card-title">Egyéb</h3>
             <ul class="mb-0">
               <li>
-                Budaörsi Római Katolikus Egyházközség
+                Budaörs Római Katolikus Plébánia
                 <ul>
                   <li>Számlaszám: <code>11103303-19828983-36000001</code></li>
-                </ul>
-              </li>
-              <li>
-                Római Katolikus Egyház
-                <ul>
-                  <li>Technikai szám: <code>0011</code></li>
                 </ul>
               </li>
               <li>
@@ -249,6 +243,12 @@ const isSummer = moment().isBetween(startOfSummer, endOfSummer)
                   <li>Adószám: <code>18681505-1-13</code></li>
                 </ul>
               </li>
+              <li>
+                Római Katolikus Egyház
+                <ul>
+                  <li>Technikai szám: <code>0011</code></li>
+                </ul>
+              </li>
             </ul>
           </div>
         </div>
@@ -259,7 +259,7 @@ const isSummer = moment().isBetween(startOfSummer, endOfSummer)
       <div class="card-body">
         <h3 class="card-title">Misézőhelyek</h3>
         <ul>
-          <li>Budaörs - Nepomuki Szent János Templom</li>
+          <li>Budaörs - Nepomuki Szent János plébániatemplom</li>
           <li>Budaörs - Farkasréti úti kápolna</li>
           <li>Budaörs - Kőhegyi kápolna</li>
         </ul>
@@ -270,12 +270,21 @@ const isSummer = moment().isBetween(startOfSummer, endOfSummer)
       <div class="card-body">
         <h3 class="card-title">Tisztségviselők</h3>
         <dl class="row mb-0">
-          <People title="Plébániai kormányzó">
+          <!-- <People title="Plébániai kormányzó"> -->
+          <People title="Plébános">
             <Person name="Nobilis Márió" />
           </People>
 
-          <People title="Segítő lelkész, nyug. plébános">
-            <Person name="Varga János" />
+          <!-- <People title="Segítő lelkész, nyug. plébános"> -->
+          <!--   <Person name="Varga János" /> -->
+          <!-- </People> -->
+
+          <People title="Kisegítő lelkész">
+            <Person name="Szakács Péter" />
+          </People>
+
+          <People title="A Pasztorális Tanács világi elnökhelyettese">
+            <Person name="Bakos Kristóf" />
           </People>
 
           <People title="Kántor">
